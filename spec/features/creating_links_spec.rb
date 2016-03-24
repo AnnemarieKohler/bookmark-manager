@@ -1,5 +1,5 @@
 feature 'Creating links' do
-  scenario '> should add link to database' do
+  scenario 'should add link to database' do
     create_link
 
     expect(current_path).to eq '/links'

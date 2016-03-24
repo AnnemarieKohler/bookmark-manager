@@ -8,7 +8,7 @@ feature 'Filter links by tags' do
   end
 
 
-  scenario '> can show links with tag on separate page' do
+  scenario 'can show links with tag on separate page' do
     visit '/links/tags/searchengine'
 
     expect(page.status_code).to eq(200)
