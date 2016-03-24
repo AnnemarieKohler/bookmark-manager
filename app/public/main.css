@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(226, 226, 226);
+  color: rgb(71, 71, 71);
+  font-family: Georgia;
+  font-size: 1em;
+}
+
+section ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+section ul li, section p {
+  margin: 5px;
+  padding: 5px 0;
+}
+
+section input {
+  font-family: Georgia;
+  width: 200px;
+  font-size: 0.8em;
+}
