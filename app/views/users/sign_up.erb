@@ -1,5 +1,7 @@
 <h1>Sign up</h1>
 
+
+
 <section>
   Please enter your log in information in the form bellow, to sign up to BookMarkManager.
 </section>
@@ -12,7 +14,12 @@
       <li><input name="username" type="text" placeholder="Username" required /></li>
       <li><input name="email" type="text" placeholder="Email" required /></li>
       <li><input name="password" type="password" placeholder="Password" required/></li>
-      <li><input name="password_confirmation" type="password" placeholder="Confirm password" required/></li>
+      <li>
+        <input name="password_confirmation" type="password" placeholder="Confirm password" required/>
+        <section class="error">
+            <%= flash[:error] %>
+        </section>
+      </li>
     </ul>
   </section>
 
