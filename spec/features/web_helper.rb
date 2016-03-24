@@ -11,6 +11,7 @@ def sign_up
   expect(page.status_code).to eq(200)
   fill_in :username, with: 'Anne'
   fill_in :email, with: 'anne@catsrule.com'
-  fill_in :password, with: 'Iamallergictocats1'
+  fill_in :password, with: 'cat'
+  fill_in :password_confirmation, with: 'cat'
   click_button "Submit"
 end
