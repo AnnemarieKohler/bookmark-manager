@@ -6,12 +6,11 @@ def create_link
   click_button 'Create Link'
 end
 
-def sign_up
+def sign_up(password_confirmation: 'cat')
   visit('/users/new')
-  expect(page.status_code).to eq(200)
   fill_in :username, with: 'Anne'
   fill_in :email, with: 'anne@catsrule.com'
   fill_in :password, with: 'cat'
-  fill_in :password_confirmation, with: 'cat'
+  fill_in :password_confirmation, with: password_confirmation
   click_button "Submit"
 end
