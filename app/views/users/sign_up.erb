@@ -1,5 +1,8 @@
 <h1>Sign up</h1>
 
+<% if flash[:notice] %>
+  <div class="error"><%= flash[:notice] %></div>
+<% end %>
 
 
 <section>
@@ -16,9 +19,11 @@
       <li><input name="password" type="password" placeholder="Password" required/></li>
       <li>
         <input name="password_confirmation" type="password" placeholder="Confirm password" required/>
-        <section class="error">
+        <% if flash[:error] %>
+          <section class="error">
             <%= flash[:error] %>
-        </section>
+          </section>
+        <% end %>
       </li>
     </ul>
   </section>

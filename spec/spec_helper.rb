@@ -33,4 +33,13 @@ RSpec.configure do |config|
       example.run
     end
   end
+
+  config.backtrace_exclusion_patterns = [
+    /\/lib\d*\/ruby\//,
+    /bin\//,
+    /gems/,
+    /spec\/spec_helper\.rb/,
+    /lib\/rspec\/(core|expectations|matchers|mocks)/
+  ]
+  # For full stack trace do rspec --backtrace
 end
