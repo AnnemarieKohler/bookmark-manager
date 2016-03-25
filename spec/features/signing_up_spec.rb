@@ -4,4 +4,9 @@ feature 'Signing up' do
     expect(page).to have_content("Welcome, Anne")
     expect(User.first.email).to eq("anne@catsrule.com")
   end
+
+  scenario 'cannot sign up if email is already registered' do
+    expect { sign_up(email: 'one@abc.de') }.to change(User, :count)
+    expect { sign_up(email: 'one@abc.de') }.to_not change(User, :count)
+  end
 end
