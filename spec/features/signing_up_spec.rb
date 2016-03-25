@@ -8,5 +8,6 @@ feature 'Signing up' do
   scenario 'cannot sign up if email is already registered' do
     expect { sign_up(email: 'one@abc.de') }.to change(User, :count)
     expect { sign_up(email: 'one@abc.de') }.to_not change(User, :count)
+    expect(page).to have_content('Email address is already registered')
   end
 end

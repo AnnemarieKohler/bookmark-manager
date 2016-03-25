@@ -1,7 +1,12 @@
 <h1>Sign up</h1>
 
-<% if flash[:notice] %>
-  <div class="error"><%= flash[:notice] %></div>
+<% if flash[:error] %>
+  Please refer to the following errors below:
+  <ul  class="error">
+    <% flash[:error].each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
 <% end %>
 
 
@@ -19,12 +24,6 @@
       <li><input name="password" type="password" placeholder="Password" required/></li>
       <li>
         <input name="password_confirmation" type="password" placeholder="Confirm password" required/>
-        <% if flash[:error] %>
-
-          <span class="error">
-            <%= flash[:error] %>
-          </span>
-        <% end %>
       </li>
     </ul>
   </section>
