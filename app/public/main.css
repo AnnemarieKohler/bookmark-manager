@@ -20,3 +20,9 @@ section input {
   width: 200px;
   font-size: 0.8em;
 }
+
+.error {
+  color: rgb(255, 56, 56);
+  font-size: 0.7em;
+  font-weight: 600;
+}

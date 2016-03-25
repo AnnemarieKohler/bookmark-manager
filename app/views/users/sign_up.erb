@@ -20,9 +20,10 @@
       <li>
         <input name="password_confirmation" type="password" placeholder="Confirm password" required/>
         <% if flash[:error] %>
-          <section class="error">
+
+          <span class="error">
             <%= flash[:error] %>
-          </section>
+          </span>
         <% end %>
       </li>
     </ul>
