@@ -6,11 +6,14 @@ def create_link
   click_button 'Create Link'
 end
 
-def sign_up(password_confirmation: 'cat')
+def sign_up(username: 'Anne',
+            email: 'anne@catsrule.com',
+            password: 'cat',
+            password_confirmation: 'cat')
   visit('/users/new')
-  fill_in :username, with: 'Anne'
-  fill_in :email, with: 'anne@catsrule.com'
-  fill_in :password, with: 'cat'
+  fill_in :username, with: username
+  fill_in :email, with: email
+  fill_in :password, with: password
   fill_in :password_confirmation, with: password_confirmation
   click_button "Submit"
 end
