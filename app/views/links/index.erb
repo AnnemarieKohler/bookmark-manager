@@ -1,8 +1,12 @@
+<% if current_user %>
+  <h1>Welcome, <%=current_user.username%></h1>
+<% end %>
+
 <ul id='links'>
   <% @links.each do |link| %>
     <li>
       Title: <%= link.title %>
-      URL: <a href="<% link.url %>" target="_blank"><%= link.url %></a> 
+      URL: <a href="<% link.url %>" target="_blank"><%= link.url %></a>
     </li>
   <% end %>
 </ul>
