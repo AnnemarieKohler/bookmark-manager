@@ -81,6 +81,8 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rack (1.6.4)
+    rack-methodoverride-with-params (1.0.0)
+      rack (~> 1)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
@@ -129,6 +131,7 @@ DEPENDENCIES
   dm-postgres-adapter
   pry
   rack
+  rack-methodoverride-with-params
   rake
   rspec
   rspec-sinatra

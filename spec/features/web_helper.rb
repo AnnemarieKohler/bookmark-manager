@@ -24,3 +24,8 @@ def sign_in(email, password)
   fill_in :password, with: password
   click_button 'Sign in'
 end
+
+def sign_out
+  visit '/links'
+  click_button 'Sign out'
+end
