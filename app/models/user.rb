@@ -1,5 +1,6 @@
 require_relative '../data_mapper_setup'
 require 'bcrypt'
+require 'securerandom'
 
 class User
   include DataMapper::Resource
@@ -19,6 +20,7 @@ class User
   }
 
   property :password_digest, Text, required: true
+  property :password_token, Text
 
 
   attr_reader :password
@@ -38,5 +40,10 @@ class User
     else
       nil
     end
+  end
+
+  def generate_token
+    self.password_token = SecureRandom.hex
+    self.save
   end
 end

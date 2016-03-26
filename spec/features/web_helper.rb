@@ -29,3 +29,9 @@ def sign_out
   visit '/links'
   click_button 'Sign out'
 end
+
+def reset_password
+  visit '/users/reset'
+  fill_in :email, with: "anne@likes-dogs.com"
+  click_button "Reset password"
+end

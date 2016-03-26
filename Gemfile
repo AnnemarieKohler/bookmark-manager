@@ -7,6 +7,7 @@ gem 'sinatra-partial'
 gem 'rake'
 gem 'bcrypt'
 gem 'sinatra-flash'
+gem 'rubysl-securerandom'
 
 group :test do
   gem 'byebug'

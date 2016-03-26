@@ -19,4 +19,17 @@ class BookmarkManager < Sinatra::Base
       erb :'/users/sign_up'
     end
   end
+
+  get '/users/reset' do
+    erb :'/users/reset'
+  end
+
+  post '/users/reset' do
+    user = User.first(email: params[:email])
+    if user
+      user.generate_token
+    end
+
+    erb :'/users/confirmation'
+  end
 end

@@ -2,7 +2,19 @@
 
 <form action="/sessions" method="post">
   <h2>Please enter your login details</h2>
-  <input type="email" name="email" placeholder="Email address" required>
-  <input type="password" name="password" required>
-  <input type="submit" value="Sign in">
+  <section>
+    <ul>
+      <li><input type="email" name="email" placeholder="Email address" required></li>
+      <li><input type="password" name="password" placeholder="Password" required></li>
+    </ul>
+  </section>
+  <section>
+    <p>
+      <input type="submit" value="Sign in">
+    </p>
+  </section>
 </form>
+
+<section>
+  <a href="/users/reset">Reset password</a>
+</section>
