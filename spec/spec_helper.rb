@@ -10,7 +10,6 @@ require File.join(File.dirname(__FILE__), '..', 'app/app.rb')
 
 require 'capybara'
 require 'rspec'
-require 'pry'
 
 Capybara.app = BookmarkManager
 
